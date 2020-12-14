@@ -1,3 +1,19 @@
 .App {
   text-align: center;
 }
+.users_table {
+  border: 1px black solid;
+  width: 90%;
+  margin: 0 auto;
+  font-size: 0.5rem;
+  border-collapse: collapse;
+}
+.users_table_header {
+  border: 1px black solid;
+  background-color: aqua;
+  margin: 0;
+}
+.users_table_row {
+  border-bottom: 1px black solid;
+  border-right: 1px black solid;
+}
