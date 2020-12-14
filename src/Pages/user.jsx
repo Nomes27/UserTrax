@@ -42,6 +42,9 @@ class User extends React.Component {
       .then(() => {
         console.log("deleted");
         this.setState({ deleted: true });
+      })
+      .catch((error) => {
+        console.log(error);
       });
   };
 

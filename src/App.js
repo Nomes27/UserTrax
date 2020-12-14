@@ -3,6 +3,7 @@ import React from "react";
 import { Router, Link } from "@reach/router";
 import UsersList from "./Pages/usersList";
 import User from "./Pages/user";
+import AddUser from "./Components/addUser";
 class App extends React.Component {
   state = {
     users: [],
@@ -26,6 +27,10 @@ class App extends React.Component {
         <Router>
           <UsersList path="/" />
           <User path="users/:user_id"></User>
+          <AddUser
+            path="/users/create"
+            usersCount={this.state.users.length}
+          ></AddUser>
         </Router>
       </div>
     );

@@ -1,5 +1,5 @@
 import React from "react";
-import User from "./user";
+import AddUser from "../Components/addUser";
 import { Router, Link } from "@reach/router";
 
 class UsersList extends React.Component {
@@ -16,6 +16,7 @@ class UsersList extends React.Component {
         this.setState({ users: [...json] });
       });
   }
+
   render() {
     console.log(this.state);
     return (
@@ -45,7 +46,9 @@ class UsersList extends React.Component {
             })}
           </tbody>
         </table>
-        <button>Add User</button>
+        <Link to="/users/create">
+          <button>Add User</button>
+        </Link>
       </div>
     );
   }

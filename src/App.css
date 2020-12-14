@@ -47,3 +47,27 @@
 .user_post_subheading {
   margin: 0;
 }
+
+/*ADD USER */
+
+.adduser_form {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 0 auto;
+  padding: 10px 0px;
+  border: 1px black solid;
+}
+.adduser_form_label {
+  margin: 2px;
+}
+.adduser_form_input {
+  width: 80%;
+  margin: 0 auto;
+  padding: 5px;
+}
+.adduser_form_button {
+  width: 80%;
+  margin: 10px auto;
+  padding: 10px;
+}
