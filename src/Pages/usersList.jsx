@@ -45,6 +45,7 @@ class UsersList extends React.Component {
             })}
           </tbody>
         </table>
+        <button>Add User</button>
       </div>
     );
   }
