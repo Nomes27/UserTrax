@@ -60,7 +60,6 @@ class User extends React.Component {
         ) : (
           <div>
             <section className="user_container">
-              <h1>{this.props.name}</h1>
               <img
                 src={avatar}
                 alt="avatar placeholder"
