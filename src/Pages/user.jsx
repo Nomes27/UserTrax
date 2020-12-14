@@ -66,29 +66,33 @@ class User extends React.Component {
                 className="user_avatar"
               ></img>
               <h2>{user.name}</h2>
-              <h3 className="user_subheading">Username</h3>
-              <p className="user_detail">{user.username}</p>
-              <h4 className="user_subheading">Email</h4>
-              <p className="user_detail">{user.email}</p>
-              <h4 className="user_subheading">Phone</h4>
-              <p className="user_detail">{user.phone}</p>
-              <h4 className="user_subheading">Address </h4>
-              <p className="user_detail">
-                Address: {address.suite}, {address.street}, {address.city},{" "}
-                {address.zipcode}
-              </p>
-              <h4 className="user_subheading">Company</h4>
-              <p className="user_detail">
-                {company.name}, {company.catchPhrase}, {company.bs}
-              </p>
-
-              <button onClick={this.deleteUser}>Delete User</button>
+              <div className="user_details_container">
+                <h3 className="user_subheading">Username</h3>
+                <p className="user_detail">{user.username}</p>
+                <h4 className="user_subheading">Email</h4>
+                <p className="user_detail">{user.email}</p>
+                <h4 className="user_subheading">Phone</h4>
+                <p className="user_detail">{user.phone}</p>
+                <h4 className="user_subheading">Address </h4>
+                <p className="user_detail">
+                  {address.suite}, {address.street}, {address.city},{" "}
+                  {address.zipcode}
+                </p>
+                <h4 className="user_subheading">Company</h4>
+                <p className="user_detail">
+                  {company.name},<br /> <em>{company.catchPhrase}</em>
+                </p>
+              </div>
+              <button onClick={this.deleteUser} className="user_delete_button">
+                Delete User
+              </button>
             </section>
             <section className="user_posts_container">
+              <h4>Posts by {user.name}</h4>
               {this.state.posts.map((post) => {
                 return (
                   <section className="user_post" key={post.id}>
-                    <h4 className="user_post_subheading">{post.title}</h4>
+                    <h5 className="user_post_subheading">{post.title}</h5>
                     <p>{post.body}</p>
                   </section>
                 );

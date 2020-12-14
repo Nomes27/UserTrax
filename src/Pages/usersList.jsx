@@ -1,6 +1,6 @@
 import React from "react";
-import AddUser from "../Components/addUser";
-import { Router, Link } from "@reach/router";
+
+import { Link } from "@reach/router";
 
 class UsersList extends React.Component {
   state = {
@@ -33,21 +33,39 @@ class UsersList extends React.Component {
           <tbody>
             {this.state.users.map((row) => {
               return (
-                <tr key={row.id}>
-                  <td className="users_table_row">
-                    <Link to={`users/${row.id}`}> {row.name}</Link>
+                <tr key={row.id} className="users_table_row">
+                  <td className="users_table_field">
+                    <Link to={`users/${row.id}`} className="users_table_link">
+                      {" "}
+                      {row.name}
+                    </Link>
                   </td>
 
-                  <td className="users_table_row">{row.username}</td>
-                  <td className="users_table_row">{row.email}</td>
-                  <td className="users_table_row">{row.company.name}</td>
+                  <td className="users_table_field">
+                    {" "}
+                    <Link to={`users/${row.id}`} className="users_table_link">
+                      {row.username}
+                    </Link>
+                  </td>
+                  <td className="users_table_field">
+                    {" "}
+                    <Link to={`users/${row.id}`} className="users_table_link">
+                      {row.email}
+                    </Link>
+                  </td>
+                  <td className="users_table_field">
+                    {" "}
+                    <Link to={`users/${row.id}`} className="users_table_link">
+                      {row.company.name}
+                    </Link>
+                  </td>
                 </tr>
               );
             })}
           </tbody>
         </table>
         <Link to="/users/create">
-          <button>Add User</button>
+          <button className="users_table_button">Add User</button>
         </Link>
       </div>
     );

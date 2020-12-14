@@ -1,9 +1,10 @@
 import "./App.css";
 import React from "react";
-import { Router, Link } from "@reach/router";
+import { Router } from "@reach/router";
 import UsersList from "./Pages/usersList";
 import User from "./Pages/user";
 import AddUser from "./Components/addUser";
+import Header from "./Components/header";
 class App extends React.Component {
   state = {
     users: [],
@@ -22,8 +23,8 @@ class App extends React.Component {
     console.log(this.state);
     return (
       <div className="App">
-        <header className="App-header"></header>
-        <h1>homepage</h1>
+        <Header />
+
         <Router>
           <UsersList path="/" />
           <User path="users/:user_id"></User>

@@ -2,7 +2,9 @@ import React from "react";
 import axios from "axios";
 
 class AddUser extends React.Component {
-  state = {};
+  state = {
+    userCreated: false,
+  };
 
   addUser = (event) => {
     event.preventDefault();
@@ -31,6 +33,7 @@ class AddUser extends React.Component {
       .then((response) => {
         console.log("user created");
         console.log(response.data, "reponseeeeeeeeeeeeeeeeeee");
+        this.setState({ userCreated: true });
       })
       .catch((error) => {
         console.log(error);
@@ -166,6 +169,7 @@ class AddUser extends React.Component {
           ></input>
           <button className="adduser_form_button">Add User</button>
         </form>
+        {this.state.userCreated && <p>User succcessfully created</p>}
       </div>
     );
   }
