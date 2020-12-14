@@ -53,121 +53,88 @@ class AddUser extends React.Component {
     return (
       <div>
         <form onSubmit={this.addUser} className="adduser_form">
-          <label htmlFor="name" className="adduser_form_label">
-            Name
-          </label>{" "}
+          <label htmlFor="name">Name</label>{" "}
           <input
             id="name"
             name="name"
             type="text"
-            className="adduser_form_input"
             onChange={this.handleChange}
             required
           ></input>
-          <label htmlFor="username" className="adduser_form_label">
-            Username
-          </label>{" "}
+          <label htmlFor="username">Username</label>{" "}
           <input
             id="username"
             name="username"
             type="text"
-            className="adduser_form_input"
             onChange={this.handleChange}
             required
           ></input>
-          <label htmlFor="email" className="adduser_form_label">
-            Email
-          </label>{" "}
+          <label htmlFor="email">Email</label>{" "}
           <input
             id="email"
             name="email"
             type="text"
-            className="adduser_form_input"
             onChange={this.handleChange}
             required
           ></input>
-          <label htmlFor="suite" className="adduser_form_label">
-            Address (suite)
-          </label>{" "}
+          <label htmlFor="suite">Address (suite)</label>{" "}
           <input
             id="suite"
             name="suite"
             type="text"
-            className="adduser_form_input"
             onChange={this.handleChange}
           ></input>
-          <label htmlFor="street" className="adduser_form_label">
-            Address- street name
-          </label>{" "}
+          <label htmlFor="street">Address- street name</label>{" "}
           <input
             id="street"
             name="street"
             type="text"
-            className="adduser_form_input"
             onChange={this.handleChange}
           ></input>
-          <label htmlFor="city" className="adduser_form_label">
-            City
-          </label>{" "}
+          <label htmlFor="city">City</label>{" "}
           <input
             id="city"
             name="city"
             type="text"
-            className="adduser_form_input"
             onChange={this.handleChange}
           ></input>
-          <label htmlFor="zipcode" className="adduser_form_label">
-            Zipcode
-          </label>{" "}
+          <label htmlFor="zipcode">Zipcode</label>{" "}
           <input
             id="zipcode"
             name="zipcode"
             type="text"
-            className="adduser_form_input"
             onChange={this.handleChange}
           ></input>
-          <label htmlFor="zipcode" className="adduser_form_label">
-            Phone
-          </label>{" "}
+          <label htmlFor="zipcode">Phone</label>{" "}
           <input
             id="phone"
             name="phone"
             type="text"
-            className="adduser_form_input"
             onChange={this.handleChange}
             required
           ></input>
-          <label htmlFor="wesbite" className="adduser_form_label">
-            Website
-          </label>{" "}
+          <label htmlFor="wesbite">Website</label>{" "}
           <input
             id="website"
             name="website"
             type="text"
-            className="adduser_form_input"
             onChange={this.handleChange}
           ></input>
-          <label htmlFor="company" className="adduser_form_label">
-            Company Name
-          </label>{" "}
+          <label htmlFor="company">Company Name</label>{" "}
           <input
             id="company"
             name="company"
             type="text"
-            className="adduser_form_input"
             onChange={this.handleChange}
           ></input>
-          <label htmlFor="company-tagline" className="adduser_form_label">
-            Company Tagline
-          </label>{" "}
+          <label htmlFor="company-tagline">Company Tagline</label>{" "}
           <input
             id="company-tagline"
             name="catchphrase"
             type="text"
-            className="adduser_form_input"
             onChange={this.handleChange}
           ></input>
-          <button className="adduser_form_button">Add User</button>
+          <button type="submit">Add User</button>
         </form>
         {this.state.userCreated && <p>User succcessfully created</p>}
       </div>

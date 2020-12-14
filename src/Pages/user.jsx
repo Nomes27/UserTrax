@@ -1,6 +1,7 @@
 import React from "react";
 import avatar from "../images/avatar.png";
 import axios from "axios";
+import CreatePost from "../Components/createPost";
 class User extends React.Component {
   state = {
     user: {},
@@ -89,11 +90,12 @@ class User extends React.Component {
             </section>
             <section className="user_posts_container">
               <h4>Posts by {user.name}</h4>
+              <CreatePost postcount={this.state.posts.length} id={user.id} />
               {this.state.posts.map((post) => {
                 return (
                   <section className="user_post" key={post.id}>
                     <h5 className="user_post_subheading">{post.title}</h5>
-                    <p>{post.body}</p>
+                    <p className="user_post_body">{post.body}</p>
                   </section>
                 );
               })}

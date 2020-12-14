@@ -27,14 +27,14 @@
   font-size: 0.5rem;
   border-collapse: collapse;
 }
-.users_table_header {
+.users_table th {
   border: 1px black solid;
   background-color: var(--silver);
   margin: 0;
   padding: 5px;
   font-size: 0.8rem;
 }
-.users_table_field {
+.users_table td {
   border-bottom: 1px black solid;
   border-right: 1px black solid;
   padding: 5px;
@@ -100,12 +100,22 @@
   width: 90%;
   margin: 0 auto;
 }
+.user_post_body {
+  font-size: 0.9rem;
+  margin: 0.5rem;
+}
+
 .user_delete_button {
   padding: 1rem;
   border-radius: 25px;
   background-color: var(--mustard);
   margin-top: 1rem;
 }
+.user_delete_button:hover {
+  background-color: var(--peach);
+  cursor: pointer;
+}
+
 /*ADD USER */
 
 .adduser_form {
@@ -117,16 +127,16 @@
   background-color: var(--silver);
   border-radius: 25px;
 }
-.adduser_form_label {
+.adduser_form label {
   margin: 2px;
 }
-.adduser_form_input {
+.adduser_form input {
   width: 80%;
   margin: 0 auto;
   padding: 5px;
   border-radius: 25px;
 }
-.adduser_form_button {
+.adduser_form button {
   width: 80%;
   margin: 10px auto;
   padding: 10px;
@@ -135,8 +145,43 @@
   font-size: 1rem;
   cursor: pointer;
 }
-.adduser_form_button:hover {
+.adduser_form button:hover {
   background-color: var(--peach);
+}
+
+/* CREATE POST */
+
+.post_form {
+  display: flex;
+  flex-direction: column;
+}
+
+.post_form label {
+  margin: 5px;
+}
+.post_form_input_title {
+  border-radius: 25px;
+  width: 80%;
+  margin: 0 auto;
+  padding: 5px;
+  text-align: center;
+  margin: 5px auto;
+}
+.post_form_input_body {
+  border-radius: 25px;
+  width: 80%;
+  margin: 5px auto;
+  padding: 1rem;
+  text-align: center;
+}
+.post_form button:hover {
+  background-color: var(--peach);
+  cursor: pointer;
+}
+.post_form button {
+  background-color: var(--mustard);
+  padding: 0.5rem;
+  border-radius: 25px;
 }
 
 @media (min-width: 760px) {

@@ -24,36 +24,36 @@ class UsersList extends React.Component {
         <table className="users_table">
           <thead>
             <tr>
-              <th className="users_table_header">Name</th>
-              <th className="users_table_header">Username</th>
-              <th className="users_table_header">Email</th>
-              <th className="users_table_header">Company</th>
+              <th>Name</th>
+              <th>Username</th>
+              <th>Email</th>
+              <th>Company</th>
             </tr>
           </thead>
           <tbody>
             {this.state.users.map((row) => {
               return (
                 <tr key={row.id} className="users_table_row">
-                  <td className="users_table_field">
+                  <td>
                     <Link to={`users/${row.id}`} className="users_table_link">
                       {" "}
                       {row.name}
                     </Link>
                   </td>
 
-                  <td className="users_table_field">
+                  <td>
                     {" "}
                     <Link to={`users/${row.id}`} className="users_table_link">
                       {row.username}
                     </Link>
                   </td>
-                  <td className="users_table_field">
+                  <td>
                     {" "}
                     <Link to={`users/${row.id}`} className="users_table_link">
                       {row.email}
                     </Link>
                   </td>
-                  <td className="users_table_field">
+                  <td>
                     {" "}
                     <Link to={`users/${row.id}`} className="users_table_link">
                       {row.company.name}
