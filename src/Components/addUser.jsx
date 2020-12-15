@@ -24,7 +24,6 @@ class AddUser extends React.Component {
           zipcode: user.zipcode,
         },
         phone: user.phone,
-        wesbite: user.website,
         company: {
           name: user.company,
           catchPhrase: user.catchPhrase,
@@ -112,13 +111,6 @@ class AddUser extends React.Component {
             type="text"
             onChange={this.handleChange}
             required
-          ></input>
-          <label htmlFor="wesbite">Website</label>{" "}
-          <input
-            id="website"
-            name="website"
-            type="text"
-            onChange={this.handleChange}
           ></input>
           <label htmlFor="company">Company Name</label>{" "}
           <input

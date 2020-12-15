@@ -32,15 +32,34 @@
 .App {
   text-align: center;
 }
+.user_total {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+}
+.user_total p {
+  margin: 0 0 1rem 0;
+  color: var(--grey);
+  font-size: 1.2em;
+}
+.fa_icon {
+  font-size: 2rem;
+  color: var(--grey);
+}
 .users_table {
   border: 1px var(--grey) solid;
   width: 90%;
   margin: 5px auto;
   font-size: 0.5rem;
   border-collapse: collapse;
+  box-shadow: 0 0 10px var(--grey);
 }
 .users_table th {
   border: 1px var(--grey) solid;
+
+  border-top: none;
   background-color: var(--silver);
   margin: 0;
   padding: 5px;
@@ -81,6 +100,9 @@
 }
 .user_avatar {
   width: 40%;
+
+  border: 5px inset var(--offwhite);
+  border-radius: 50%;
 }
 .user_subheading {
   margin-bottom: 5px;
@@ -91,6 +113,7 @@
   margin: 0 auto;
   border-radius: 25px;
   padding: 5px;
+  box-shadow: 2px 2px 5px var(--grey);
 }
 .user_detail {
   margin-top: 0rem;
@@ -102,11 +125,13 @@
   padding: 1rem;
   margin: 1rem;
 }
-.user_post {
+
+section .user_post {
   background-color: var(--peach);
-  padding: 5px 5px 5px 5px;
-  margin: 10px 5px 10px 5px;
+  padding: 5px;
+  margin: 10px 5px 20px 5px;
   border-radius: 25px;
+  box-shadow: 0 0 5px var(--grey);
 }
 .user_post_subheading {
   font-size: 0.9rem;
@@ -213,8 +238,9 @@
   /* INDIVIDUAL USER PAGE */
 
   .user_container {
-    width: 60%;
-    margin: 0 auto;
+    width: 50%;
+    margin: 1rem auto;
+    padding: 2rem;
   }
   .user_container h2 {
     font-size: 2rem;
@@ -229,6 +255,7 @@
   .user_details_container {
     width: 50%;
     padding: 2rem;
+    border: 5px solid var(--peach);
   }
   .post_form label {
     font-size: 1.2rem;
@@ -244,11 +271,11 @@
     font-size: 1rem;
   }
   .post_form button {
-    width: 10%;
+    width: 8rem;
     margin: 0 auto;
     padding: 1rem;
   }
-  .user_post {
+  section .user_post {
     width: 50%;
     margin: 30px auto;
     padding: 2rem;
@@ -258,13 +285,14 @@
     margin: 0.5rem;
   }
   .user_delete_button {
-    width: 10%;
+    width: 8rem;
   }
   /* HEADER */
 
   .header_h1 {
     font-size: 4rem;
     margin-top: 5rem;
+    margin-bottom: 0.5rem;
   }
   .header_nav {
     padding: 2rem;

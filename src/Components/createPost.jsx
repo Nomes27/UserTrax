@@ -4,6 +4,7 @@ class CreatePost extends React.Component {
   state = {
     title: "",
     body: "",
+    postCreated: false,
   };
 
   handleChange = (event) => {
@@ -27,6 +28,7 @@ class CreatePost extends React.Component {
       .then((response) => {
         console.log(response.data);
         console.log("posted");
+        this.setState({ postCreated: true });
       })
       .catch((error) => {
         console.log(error);
@@ -54,6 +56,7 @@ class CreatePost extends React.Component {
             onChange={this.handleChange}
           ></input>
           <button type="submit">Add new post</button>
+          {this.state.postCreated && <p>Your post has been submitted</p>}
         </form>
       </div>
     );

@@ -1,5 +1,5 @@
 import React from "react";
-
+import { FaUsers } from "react-icons/fa";
 import { Link } from "@reach/router";
 
 class UsersList extends React.Component {
@@ -21,6 +21,10 @@ class UsersList extends React.Component {
     console.log(this.state);
     return (
       <div>
+        <section className="user_total">
+          <FaUsers className="fa_icon" alt="user icon" />
+          <p>{this.state.users.length} total users</p>
+        </section>
         <table className="users_table">
           <thead>
             <tr>
