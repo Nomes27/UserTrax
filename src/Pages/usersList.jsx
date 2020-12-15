@@ -18,7 +18,6 @@ class UsersList extends React.Component {
   }
 
   render() {
-    console.log(this.state);
     return (
       <div>
         <section className="user_total">

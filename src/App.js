@@ -8,6 +8,7 @@ import Header from "./Components/header";
 class App extends React.Component {
   state = {
     users: [],
+    isLoading: true,
   };
 
   componentDidMount() {
@@ -16,15 +17,14 @@ class App extends React.Component {
         return response.json(); //promise
       })
       .then((json) => {
-        this.setState({ users: [...json] });
+        this.setState({ users: [...json], isLoading: false });
       });
   }
   render() {
-    console.log(this.state);
     return (
       <div className="App">
         <Header />
-
+        {this.state.isLoading && <p>please wait, users loading...</p>}
         <Router>
           <UsersList path="/" />
           <User path="users/:user_id"></User>
